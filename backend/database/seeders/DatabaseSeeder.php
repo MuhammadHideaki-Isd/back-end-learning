@@ -20,6 +20,9 @@ class DatabaseSeeder extends Seeder
         User::factory()->create([
             'name' => 'Test User',
             'email' => 'test@example.com',
+            'access_level' => 1,
         ]);
+
+        $this->call(ProductSeeder::class);
     }
 }
